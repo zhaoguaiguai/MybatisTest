@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--mapperw文件，写sql语句-->
+<mapper namespace="com.sunlei666.dao.StudentDao">
+  <select id="selectStudentById" resultType="com.sunlei666.domain.Student">
+    select * from Blog where id = #{id}
+  </select>
+</mapper>
+
+<!--
+<mapper>
+    namespace:命名空间，必须有值，不能为空。唯一值。
+    推荐使用Dao接口的全限定名。
+    作用：参与识别sql语句
+
+<select>
+    表示查询操作，里面是select语句
+    id:要执行sql语句的唯一标识，推荐使用Dao接口中的方法名称
+    resultType：告诉mybatis,把数据赋值给哪个类型的java对象
+    其值：现在使用的java对象的全限定名称
+-->
